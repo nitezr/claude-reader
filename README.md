@@ -10,6 +10,8 @@ Send Claude a link. It cleans it up, summarises it and drops it in your Reader. 
 ![No build step](https://img.shields.io/badge/build%20step-none-1d7f57?style=for-the-badge)
 ![License MIT](https://img.shields.io/badge/license-MIT-16191f?style=for-the-badge)
 
+### 👉 [**Try the live demo**](https://nitezr.github.io/claude-reader/)
+
 <img src="docs/library.jpg" alt="Reader library" width="100%">
 
 </div>

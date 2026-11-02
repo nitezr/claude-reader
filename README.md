@@ -22,6 +22,9 @@ Send Claude a link. It cleans it up, summarises it and drops it in your Reader. 
 
 - 🔗 **Save anything**: articles, tweets and threads, YouTube videos, Instagram posts. Just tell Claude "save this to my Reader".
 - 🧾 **Clean reading view**: big serif type and no ads. It remembers where you stopped.
+- 🅰️ **Reading settings** (`Aa` or `Shift+A`): text size, serif or sans, line spacing, line width, and Auto / Light / Sepia / Dark themes, saved per device.
+- ▶️ **Video-friendly**: YouTube items get a player-style cover that opens the video, and show *Video* or *Playlist* instead of a fake read time.
+- 🖼️ **Covers for everything**: real images when there's one; otherwise a quote-style card with the author's photo and the opening lines.
 - 🖍️ **Highlights**: select text and press **H**. Add notes, then review them all in one place.
 - 📥 **Triage like email**: Inbox → Later → Archive, plus a ⭐ Shortlist and tags.
 - 🧠 **Summary and key points** on every item, written by Claude when it saves.
@@ -31,6 +34,10 @@ Send Claude a link. It cleans it up, summarises it and drops it in your Reader. 
 | Reading view | Phone | Highlights |
 |---|---|---|
 | <img src="docs/article.jpg" width="420"> | <img src="docs/mobile.jpg" width="160"> | <img src="docs/highlights.jpg" width="420"> |
+
+| Home | Videos | Reading settings |
+|---|---|---|
+| <img src="docs/home.jpg" width="420"> | <img src="docs/video.jpg" width="420"> | <img src="docs/settings.jpg" width="420"> |
 
 > Everything in the screenshots is **sample content** written for the demo.
 
@@ -46,7 +53,7 @@ flowchart LR
 ```
 
 - **`artifact/index.html`**: the whole app in one file. No framework and no build step.
-- **Database collections**: `docs` (saved items), `highlights`, and `queue` (links you add from inside the app).
+- **Database collections**: `docs` (saved items), `highlights`, `queue` (links you add from inside the app), and `imports` (bulk-import jobs: Claude uploads a JSON file and the app loads it the next time you open it — handy for moving hundreds of items in at once).
 - **Claude does the heavy lifting**: fetching, cleaning, summarising. The skill in `skill/reader-save` tells it exactly how.
 
 ## 🚀 Make your own (no coding)
@@ -80,7 +87,7 @@ process my Reader queue
 
 ## 🎨 Remix ideas (just ask Claude)
 
-- "Add a dark sepia theme for night reading."
+- "Pull YouTube transcripts so videos are readable and highlightable."
 - "Show a weekly 'what I read' stat on the home page."
 - "Export all my highlights as Markdown with a Copy button."
 - "Add a Daily Review that shows me 5 random old highlights."

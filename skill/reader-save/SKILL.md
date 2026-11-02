@@ -40,6 +40,7 @@ My Reader is a claude.ai artifact built from this repo.
    - **Tweet or thread:** one `p` block per tweet.
    - **Video:** use the description or transcript and write notes as `content`. Put the main ideas in `keyPoints`.
    - **Instagram:** the caption, plus a list of what's shown.
+   - **Tips that save time:** tweets come back cleanly from `https://api.fxtwitter.com/<user>/status/<id>` (full text, author, photo). YouTube titles come from `https://www.youtube.com/oembed?url=<link>&format=json` and the cover from `https://img.youtube.com/vi/<id>/hqdefault.jpg`.
 3. Write `summary` (two sentences max) and 3–5 `keyPoints`. Guess `readMins` at about 230 words a minute. Pick 1–3 tags.
 4. Optional cover: artifacts can't load outside images, so shrink the page's main image to about 400 px wide JPEG and store it as a `data:` URI in `image`. Skip it if it's over 60 KB.
 5. Skip a link if a doc with the same `url` already exists (check with `db_query` or `db_list`).
